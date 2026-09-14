@@ -65,12 +65,16 @@ function cutscene_actor_move(target, movement, wait = true) -> Undefined
 
 ## `cutscene_anim`
 ```tlf:no-line-numbers
-cutscene_anim(local = true, autoset = true) -> Struct.cutscene
+function cutscene_anim(val1, val2, frames, ease_type, call_method) -> Undefined
 ```
 
 | Argument | Type(s) | Meaning |
 | - | - | - |
-
+| <span class="arg">val1</span> | <span class="keyword">Real</span> | The first value of the animation. |
+| <span class="arg">val2</span> | <span class="keyword">Real</span> | The last value of the animation. |
+| <span class="arg">frames</span> | <span class="keyword">Real</span> | How long it takes for the animation to get from <span class="arg">val1</span> to <span class="arg">val2</span>. (in frames) |
+| <span class="arg">ease_type</span> | <span class="keyword">Enum.anime_curve</span><br><span class="keyword">String</span><br><span class="keyword">Struct.AnimCurve</span><br><span class="keyword">Struct.AnimCurveChannel</span><br><span class="keyword">Function(Real)</span> -> <span class="keyword">Real</span> | The animation's easing curve.<br><br>If this argument is a <span class="keyword">Function</span>, the input will only take in values between 0 and 1. |
+| <span class="arg">call_method</span> | <span class="keyword">Function(Real)</span> -> <span class="keyword">Real?</span> | The method to call for each frame of animation. |
 ## `cutscene_animate`
 ```tlf:no-line-numbers
 function cutscene_animate(val1, val2, frames, ease_type, inst, var_name) -> Undefined
@@ -99,19 +103,27 @@ The cutscene will NOT wait for any animations created with this function to end.
 
 ## `cutscene_audio_play`
 ```tlf:no-line-numbers
-cutscene_create(local = true, autoset = true) -> Struct.cutscene
-
-local: Bool - Toggles whether the cutscene is destroyed when leaving the room.
-autoset: Bool - Toggles whether this cutscene gets set as the current cutscene or not.
+function cutscene_audio_play(sound, loop = 0, gain = 1, pitch = 1, nonstack = false, sound_type = AUDIO.SOUND, offset = 0) -> Undefined
 ```
+
+| Argument | Type(s) | Meaning |
+| - | - | - |
+| <span class="arg">sound</span> | <span class="keyword">Asset.GMSound</span> | The sound to play. |
+| <span class="arg">loop</span> | <span class="keyword">Real</span> | Whether the sound should loop when it finishes. |
+| <span class="arg">gain</span> | <span class="keyword">Real</span> | The gain the sound should play at. It will be automatically multiplied by the volume of the sound type.  |
+| <span class="arg">pitch</span> | <span class="keyword">Real</span> | The pitch the sound should play at. |
+| <span class="arg">nonstack</span> | <span class="keyword">Bool</span> | Whether the sound shouldn't stack if played on the same frame twice. |
+| <span class="arg">sound_type</span> | <span class="keyword">Enum.AUDIO</span> | The type of the sound you'd like to play (determines the target emitter) |
+| <span class="arg">offset</span> | <span class="keyword">Real</span> | An offset in time that the sound will play after (in frames). |
+
 
 ## `cutscene_camera_pan`
 ```tlf:no-line-numbers
-cutscene_create(local = true, autoset = true) -> Struct.cutscene
-
-local: Bool - Toggles whether the cutscene is destroyed when leaving the room.
-autoset: Bool - Toggles whether this cutscene gets set as the current cutscene or not.
+function cutscene_camera_pan(x_dest, y_dest, time, wait = true, ease_type = "linear", confined_x = true, confined_y = true) -> Undefined
 ```
+
+| Argument | Type(s) | Meaning |
+| - | - | - |
 
 ## `cutscene_choicer`
 ```tlf:no-line-numbers
@@ -121,6 +133,9 @@ local: Bool - Toggles whether the cutscene is destroyed when leaving the room.
 autoset: Bool - Toggles whether this cutscene gets set as the current cutscene or not.
 ```
 
+| Argument | Type(s) | Meaning |
+| - | - | - |
+
 ## `cutscene_debug_message`
 ```tlf:no-line-numbers
 cutscene_create(local = true, autoset = true) -> Struct.cutscene
@@ -128,6 +143,9 @@ cutscene_create(local = true, autoset = true) -> Struct.cutscene
 local: Bool - Toggles whether the cutscene is destroyed when leaving the room.
 autoset: Bool - Toggles whether this cutscene gets set as the current cutscene or not.
 ```
+
+| Argument | Type(s) | Meaning |
+| - | - | - |
 
 ## `cutscene_dialogue`
 ```tlf:no-line-numbers
@@ -137,6 +155,9 @@ local: Bool - Toggles whether the cutscene is destroyed when leaving the room.
 autoset: Bool - Toggles whether this cutscene gets set as the current cutscene or not.
 ```
 
+| Argument | Type(s) | Meaning |
+| - | - | - |
+
 ## `cutscene_event_isvalid`
 ```tlf:no-line-numbers
 cutscene_create(local = true, autoset = true) -> Struct.cutscene
@@ -145,16 +166,22 @@ local: Bool - Toggles whether the cutscene is destroyed when leaving the room.
 autoset: Bool - Toggles whether this cutscene gets set as the current cutscene or not.
 ```
 
+| Argument | Type(s) | Meaning |
+| - | - | - |
+
 ## `cutscene_func`
 ```tlf:no-line-numbers
-cutscene_func(func, args = [])
-
-func: Function - The function that should be called during the cutscene.
-args: Array - An array containing arguments that will be fed into `func`.
+function cutscene_func(func, args = []) -> Undefined
 ```
+
+| Argument | Type(s) | Meaning |
+| - | - | - |
+| <span class="arg">func</span> | <span class="keyword">Function</span> | The function that should be called during the cutscene. |
+| <span class="arg">args</span> | <span class="keyword">Array</span> | An array containing arguments that will be fed into <span class="arg">func</span>. |
+
 This function calls an external function or method inside a cutscene.
 
-::: tip
+::: tip {no-title}
 With this function, you can run cutscenes inside cutscenes, like so:
 ```gml
 cutscene_create();
@@ -171,78 +198,84 @@ cutscene_play();
 ## `cutscene_instance_create`
 ```tlf:no-line-numbers
 cutscene_instance_create(local = true, autoset = true) -> Struct.cutscene
-
-local: Bool - Toggles whether the cutscene is destroyed when leaving the room.
-autoset: Bool - Toggles whether this cutscene gets set as the current cutscene or not.
 ```
 
+| Argument | Type(s) | Meaning |
+| - | - | - |
 ## `cutscene_party_follow`
 ```tlf:no-line-numbers
 cutscene_create(local = true, autoset = true) -> Struct.cutscene
-
-local: Bool - Toggles whether the cutscene is destroyed when leaving the room.
-autoset: Bool - Toggles whether this cutscene gets set as the current cutscene or not.
 ```
 
+| Argument | Type(s) | Meaning |
+| - | - | - |
 ## `cutscene_party_interpolate`
 ```tlf:no-line-numbers
 cutscene_create(local = true, autoset = true) -> Struct.cutscene
-
-local: Bool - Toggles whether the cutscene is destroyed when leaving the room.
-autoset: Bool - Toggles whether this cutscene gets set as the current cutscene or not.
 ```
+
+| Argument | Type(s) | Meaning |
+| - | - | - |
 
 ## `cutscene_player_canmove`
 ```tlf:no-line-numbers
-cutscene_create(local = true, autoset = true) -> Struct.cutscene
-
-local: Bool - Toggles whether the cutscene is destroyed when leaving the room.
-autoset: Bool - Toggles whether this cutscene gets set as the current cutscene or not.
+function cutscene_player_canmove(can_move, global = false) -> Undefined
 ```
+
+| Argument | Type(s) | Meaning |
+| - | - | - |
+| <span class="arg">can_move</span> | <span class="keyword">Bool</span> | Whether the player is allowed to move or not. |
+| <span class="arg">global</span> | <span class="keyword">Bool</span> | Whether the movement rule persists through rooms or not. |
 
 ## `cutscene_set_partysprite`
 ```tlf:no-line-numbers
-cutscene_create(local = true, autoset = true) -> Struct.cutscene
-
-local: Bool - Toggles whether the cutscene is destroyed when leaving the room.
-autoset: Bool - Toggles whether this cutscene gets set as the current cutscene or not.
+function cutscene_set_partysprite(party_name, sprite_ref, index = undefined, speed = undefined) -> Undefined
 ```
+| Argument | Type(s) | Meaning |
+| - | - | - |
+| <span class="arg">party_name</span> | <span class="keyword">String</span> | The party member's *internal* name. |
+| <span class="arg">sprite_ref</span> | <span class="keyword">String</span><br><span class="keyword">Asset.GMSprite</span> | The party member's *internal* name. |
+| <span class="arg">index</span> | <span class="keyword">Real</span><br><span class="keyword">Undefined</span> | The party member's *internal* name. |
+| <span class="arg">speed</span> | <span class="keyword">Real</span><br><span class="keyword">Undefined</span> | The party member's *internal* name. |
 
 ## `cutscene_set_variable`
 ```tlf:no-line-numbers
-cutscene_create(local = true, autoset = true) -> Struct.cutscene
-
-local: Bool - Toggles whether the cutscene is destroyed when leaving the room.
-autoset: Bool - Toggles whether this cutscene gets set as the current cutscene or not.
+function cutscene_set_variable(instance, variable_name, value) -> Undefined
 ```
+| Argument | Type(s) | Meaning |
+| - | - | - |
+| <span class="arg">instance</span> | <span class="keyword">Asset.GMObject</span><br><span class="keyword">Id.Instance</span><br><span class="keyword">Struct</span> | The instance holding the variable which you'd like to change. |
+| <span class="arg">variable_name</span> | <span class="keyword">String</span> | The variable's name as a string (case-sensitive). |
+| <span class="arg">value</span> | <span class="keyword">Any</span> | The new value you want to set the variable to. |
+
 
 ## `cutscene_sleep`
 ```tlf:no-line-numbers
-cutscene_sleep(frames)
-
-frames: Real - How long the cutscene should pause for (in frames).
+function cutscene_sleep(frames) -> Undefined 
 ```
+| Argument | Type(s) | Meaning |
+| - | - | - |
+| <span class="arg">frames</span> | <span class="keyword">Real</span> | How long the cutscene should pause for (in frames). |
+
 
 ## `cutscene_wait_dialogue_boxes`
 ```tlf:no-line-numbers
-cutscene_wait_dialogue_boxes()
-
-local: Bool - Toggles whether the cutscene is destroyed when leaving the room.
-autoset: Bool - Toggles whether this cutscene gets set as the current cutscene or not.
+function cutscene_wait_dialogue_boxes(boxes_to_wait_for) -> Undefined
 ```
+| Argument | Type(s) | Meaning |
+| - | - | - |
+| <span class="arg">boxes_to_wait_for</span> | <span class="keyword">Real</span> | The amount of dialogue pages to pass for the cutscene to resume. |
 
 ## `cutscene_wait_dialogue_finish`
 ```tlf:no-line-numbers
-cutscene_create(local = true, autoset = true)
-W
-local: Bool - Toggles whether the cutscene is destroyed when leaving the room.
-autoset: Bool - Toggles whether this cutscene gets set as the current cutscene or not.
+function cutscene_wait_dialogue_finish() -> Undefined
 ```
 
 ## `cutscene_wait_until`
 ```tlf:no-line-numbers
-cutscene_wait_until(resume_condition, arguments = [])
-
-resume_condition: Function -> Bool - A function/method that should return true for the cutscene to continue.
-arguments: Array - An array of arguments to be fed into resume_condition.
+function cutscene_wait_until(resume_condition, arguments = []) -> Undefined
 ```
+| Argument | Type(s) | Meaning |
+| - | - | - |
+| <span class="arg">resume_condition</span> | <span class="keyword">Function</span> -> <span class="keyword">Bool</span> | A function/method that should return <span class="constant">true</span> for the cutscene to continue. |
+| <span class="arg">arguments</span> | <span class="keyword">Array</span> | An array of arguments to be fed into <span class="arg">resume_condition</span>. |

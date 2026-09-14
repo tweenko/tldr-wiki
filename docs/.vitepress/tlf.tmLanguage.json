@@ -59,7 +59,7 @@
 
         {
             "name": "variable.builtin.gml",
-            "match": "\\b(x|y|id|visible|solid|persistent|depth|layer|alarm|direction|speed|hspeed|vspeed|gravity|gravity_direction|friction|image_index|image_speed|image_number|image_angle|image_alpha|image_blend|image_xscale|image_yscale|sprite_index|mask_index|path_index|path_position|path_positionprev|path_speed|path_scale|path_orientation|path_endaction|timeline_index|timeline_position|timeline_speed|timeline_running|object_index|room|room_width|room_height|room_speed|fps|fps_real|current_time|current_year|current_month|current_day|current_weekday|current_hour|current_minute|current_second|score|lives|health)"
+            "match": "\\b(x|y|id|visible|solid|persistent|depth|layer|alarm|direction|speed|hspeed|vspeed|gravity|gravity_direction|friction|image_index|image_speed|image_number|image_angle|image_alpha|image_blend|image_xscale|image_yscale|sprite_index|mask_index|path_index|path_position|path_positionprev|path_speed|path_scale|path_orientation|path_endaction|timeline_index|timeline_position|timeline_speed|timeline_running|object_index|room|room_width|room_height|room_speed|fps|fps_real|current_time|current_year|current_month|current_day|current_weekday|current_hour|current_minute|current_second|score|lives|health)(?!\\w+)"
         },
         {
             "name": "variable.global",

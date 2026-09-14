@@ -51,6 +51,12 @@ export default defineConfig({
                 // TODO: Add text box/typer control info
                 // TODO: Add Actors
               ]
+            },
+            {
+                text: "Code Reference",
+                items: [
+                    {text: "Cutscene Functions", link:"/code-reference/cutscenes"}
+                ]
             }
         ],
 
