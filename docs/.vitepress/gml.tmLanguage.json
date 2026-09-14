@@ -68,8 +68,12 @@
             "match": "\\b[0-9]+(\\.[0-9]+)?\\b"
         },
         {
-            "name": "constant.enum.gml",
-            "match": "\\b[A-Za-z0-9_]+\\.[A-Za-z0-9_]+"
+            "name": "constant.enum.user",
+            "match": "\\b[A-Z0-9_]+\\.[A-Z0-9_]+"
+        },
+        {
+            "name": "constant.enum.anime",
+            "match": "\\banime_curve\\.\\w+"
         },
 
         {
