@@ -20,7 +20,7 @@ description: An overview of the battle system.
 The enemy and encounter set structs define meta information about the enemy and encounter.
 They include what enemies take part in the encounter, the background of the encounter, the enemy's stats and ACTs, and dialogue. See [Encounter Sets](./encounter-sets.md) for more info.
 
-The enemy and bullet objects are GameMaker objects that define how enemies and bullets are drawn, how they move, and how much damage they deal. See [Actors](../Not-Written) for more info.
+The enemy and bullet objects are GameMaker objects that define how enemies and bullets are drawn, how they move, and how much damage they deal. See Actors for more info.
 
 Turn objects define what bullet patterns an enemy will spawn at the start of their turn. During an encounter, every enemy in the encounter will create their turn object at the beginning of the dodging phase. See [Turn Objects](./turn-objects.md) for more info.
 

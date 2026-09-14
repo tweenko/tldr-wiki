@@ -78,16 +78,16 @@ for a complete order of events, see [Event Order](./battle-system-intro.md#event
 
 |Name|Type|Default|
 |:--:|:--:|:-----:|
-|`bgm`|Asset.GMSound|`mus_battle`|
-|`bgm_pitch`|Real|1|
-|`bgm_gain`|Real|1|
+|`bgm`|`Asset.GMSound`|`mus_battle`|
+|`bgm_pitch`|`Real`|1|
+|`bgm_gain`|`Real`|1|
 
 ### Miscellaneous 
 
 |Name|Type|Default|Notes|
 |:--:|:--:|:-----:|-----|
 |`bg_grid`|Enum: `ENC_BG`|`ENC_BG.GRID`|Can be `ENC_BG.GRID` or `ENC_BG.NONE`. add new backgrounds in `o_eff_bg`.|
-|`can_change_turnlen`|bool|`true`|If you can change the turn length by defending, this is not implemented.|
-|`display_target`|bool|`false`|whether to display the targets of the enemy's attack, like in chapter 1.|
+|`can_change_turnlen`|`bool`|`true`|If you can change the turn length by defending, this is not implemented.|
+|`display_target`|`bool`|`false`|whether to display the targets of the enemy's attack, like in chapter 1.|
 |`enc_var_struct`|struct|`{}`|overrides properties in `o_enc`, for example setting this to `{tp_constrict: true}` will cause the battle to be in darkness mode.|
 |`party_actions`|struct|A struct with `party_name: struct` the default party action.|By defaults has each party member with an R-Action/S-Action type. these inherit from `item_s_defaultaction`, which itself is an `item_spell`. See the page on items for more information.|

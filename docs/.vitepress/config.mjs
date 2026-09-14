@@ -40,7 +40,7 @@ export default defineConfig({
               items: [
                 {text: "Battle System Intro", link: "/battle-system/battle-system-intro"},
                 {text: "Encounter Sets", link: "/battle-system/encounter-sets"},
-                {text: "Enemies", link: "/battle-system/enemy-reference"},
+                {text: "Enemies And Recruits", link: "/battle-system/enemy-reference"},
                 {text: "Turn Objects", link: "/battle-system/turn-objects"}
               ]
             },
