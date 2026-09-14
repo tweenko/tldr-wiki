@@ -41,7 +41,7 @@ If you're unsure what an override does, mess with it until you figure it out. or
 
 `win_condition`: If this is true, the battle will end. Best left alone, by default checks every enemy is still fighting (not spared/downed).
 
-`target_calculation`: Defaults to `ENC_TARGET.RANDOM`, can also be `ALL`, `ANY`. If it is callable, it should return an array of indexes of party members who are targeted. `RANDOM` chooses one party member each turn, `ANY` chooses one party member each time the soul takes damage, `ALL` is self-explanatory.
+`target_calculation`: Defaults to `ENC_TARGET.RANDOM`, can also be `ENC_TARGET.ALL`, `ENC_TARGET.ANY`. If it is callable, it should return an array of indexes of party members who are targeted. `RANDOM` chooses one party member each turn, `ANY` chooses one party member each time the soul takes damage, `ALL` is self-explanatory.
 
 `target_recalculate_condition`: This is checked each time an enemy attack starts, defaults to `undefined`. If it is callable it takes array of indexes that are the current targets. Normally, if the target calculation is `ALL` or `ANY` they are never recalculated, and if it is `RANDOM` it recalculates if the target is downed.
 
