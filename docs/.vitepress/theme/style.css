@@ -129,3 +129,97 @@
   --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
 }
 
+
+/**
+ * Component: Code Text Highlights
+ * -------------------------------------------------------------------------- */
+
+span.arg {
+  color: #b2b1ff;
+  font-family: "consolas";
+
+  background-color: #b2b1ff1a;
+  
+  padding: 1px;
+  padding-inline: 4px;
+  corner-shape: bevel;
+  border-radius: 2px;
+}
+span.func {
+  color: #ffb871;
+  font-family: "consolas";
+
+  background-color: #ffb8711a;
+  
+  padding: 1px;
+  padding-inline: 4px;
+  corner-shape: bevel;
+  border-radius: 2px;
+}
+span.keyword {
+  color: #ffb871;
+  font-weight: bold;
+  font-family: "consolas";
+
+  background-color: #ffb8711a;
+  
+  padding: 1px;
+  padding-inline: 4px;
+  corner-shape: bevel;
+  border-radius: 2px;
+}
+span.constant {
+  color: #ff8080;
+  font-family: "consolas";
+
+  background-color: #ff80801a;
+  
+  padding: 1px;
+  padding-inline: 4px;
+  corner-shape: bevel;
+  border-radius: 2px;
+}
+span.builtin {
+  color: #58e55a;
+  font-family: "consolas";
+
+  background-color: #58e55a1a;
+  
+  padding: 1px;
+  padding-inline: 4px;
+  corner-shape: bevel;
+  border-radius: 2px;
+}
+span.global {
+  color: #ff7eff;
+  font-family: "consolas";
+
+  background-color: #ff7eff1a;
+  
+  padding: 1px;
+  padding-inline: 4px;
+  corner-shape: bevel;
+  border-radius: 2px;
+}
+span.local {
+  color: #fff899;
+  font-family: "consolas";
+
+  background-color: #fff8991a;
+  
+  padding: 1px;
+  padding-inline: 4px;
+  corner-shape: bevel;
+  border-radius: 2px;
+}
+span.string {
+  color: #ffff00;
+  font-family: "consolas";
+
+  background-color: #ffff001a;
+  
+  padding: 1px;
+  padding-inline: 4px;
+  corner-shape: bevel;
+  border-radius: 2px;
+}
