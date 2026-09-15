@@ -36,7 +36,7 @@
 
         {
             "name": "keyword.control.gml",
-            "match": "\\b(if|else|switch|case|default|for|while|do|until|repeat|with|break|continue|return|exit|delete)"
+            "match": "\\b(if|else|switch|case|default|for|while|do|until|repeat|with|break|continue|return|exit|delete)(?=( |\\(|;))"
         },
         {
             "name": "keyword.type.gml",
