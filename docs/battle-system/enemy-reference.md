@@ -32,25 +32,25 @@ see [Turn Objects](./turn-objects.md).
 
 |Name|Default|
 |:--:|:-----:|
-|`s_idle`|`spr_e_virovirokun_idle`|
-|`s_spare`|`spr_e_virovirokun_spare`|
-|`s_hurt`|`spr_e_virovirokun_hurt`|
+|<span class="arg">s_idle</span>|<span class="constant">spr_e_virovirokun_idle</span>|
+|<span class="arg">s_spare</span>|<span class="constant">spr_e_virovirokun_spare</span>|
+|<span class="arg">s_hurt</span>|<span class="constant">spr_e_virovirokun_hurt</span>|
 
 #### Stats
 
 |Name|Type|Default|Note|
 |:--:|:--:|:-----:|:---|
-|hp|`real`|170||
-|max_hp|`real`|170||
-|attack|`real`|0|Unused, doesn't affect anything.|
-|defense|`real`|0|When attacked, will reduce incoming damage by 3x the value.|
-|status_effect|`string`|""|e.g: "(Tired)" for tired enemies, decorative, drawn next to the enemy name.|
-|carrying_money|`real`|0|The amount of money the enemy will drop when defeated.|
-|element|`string`|`undefined`|Does nothing on it's own, if the party has weapons with elemental damage multiplier it will check against this string.|
+|<span class="arg">hp</span>|<span class="keyword">Real</span>|170||
+|<span class="arg">max_hp</span>|<span class="keyword">Real</span>|170||
+|<span class="arg">attack</span>|<span class="keyword">Real</span>|0|Unused, doesn't affect anything|
+|<span class="arg">defense</span>|<span class="keyword">Real</span>|0|When attacked, will reduce incoming damage by 3x the value|
+|<span class="arg">status_effect</span>|<span class="keyword">String</span>|<span class="string">""</span>|e.g: <span class="string">"(Tired)"</span> for tired enemies, decorative, drawn next to the enemy name|
+|<span class="arg">carrying_money</span>|<span class="keyword">Real</span>|0|The amount of money the enemy will drop when defeated|
+|<span class="arg">element</span>|<span class="keyword">String</span> or<br><span class="keyword">Undefined</span>|<span class="constant">undefined</span>|Does nothing on it's own, if the party has weapons with elemental damage multiplier it will check against this string.|
 
 #### Acts
 
-`acts` is an optional override, ACTs are unique for each enemy, by default every enemy has the following act:
+<span class="arg">acts</span> is an optional override, ACTs are unique for each enemy, by default every enemy has the following act:
 
 ```gml
 acts = [
@@ -76,37 +76,37 @@ acts = [
 #### Events
 
 Enemy events are nearly identical and called on the same frame as [Encounter Set Events](./encounter-sets.md#events).
-The exception is `ev_party_turn` which has been removed,
-and the added `ev_pre_dialogue`, which is triggered before the dialogue bubble appears.
+The exception is <span class="arg">ev_party_turn</span> which has been removed,
+and the added <span class="arg">ev_pre_dialogue</span>, which is triggered before the dialogue bubble appears.
 
 #### Mercy
 
 |Name|Type|Default|Note|
 |:--:|:--:|:-----:|:---|
-|mercy|`real`|0|Starting mercy.|
-|mercy_add_pity_percent|`real`|20|The mercy gained when trying to spare an enemy who is not at max mercy.|
-|can_spare|`bool`|`true`||
-|no_mercy_text|`string`|"* But you couldn't spare it, for some reason."||
+|<span class="arg">mercy</span>|<span class="keyword">Real</span>|0|Starting mercy|
+|<span class="arg">mercy_add_pity_percent</span>|<span class="keyword">Real</span>|20|The mercy gained when trying to spare an enemy who is not at max mercy.|
+|<span class="arg">can_spare</span>|<span class="keyword">Bool</span>|<span class="constant">true</span>||
+|<span class="arg">no_mercy_text</span>|<span class="keyword">String</span>|<span class="string">"* But you couldn't spare it, for some reason."</span>||
 
 #### Tired
 |Name|Type|Default|Note|
 |:--:|:--:|:-----:|:---|
-|tired|`bool`|`false`||
-|low_hp_tired|`bool`|`true`|Whether the enemy should turn tired when hp is low.|
-|low_hp_tired_threshold|`Real` [0, 1]|1/2|If the hp is below this threshold, the enemy will become tired if low_hp_tired is true.|
+|<span class="arg">tired</span>|<span class="keyword">Bool</span>|<span class="constant">false</span>||
+|<span class="arg">low_hp_tired</span>|<span class="keyword">Bool</span>|<span class="constant">true</span>|Whether the enemy should turn tired when <span class="arg">hp</span> is low|
+|<span class="arg">low_hp_tired_threshold</span>|<span class="keyword">Real</span> [0, 1]|0.5|If <span class="arg">hp</span> is below this threshold, the enemy will become tired if <span class="arg">low_hp_tired</span> is <span class="constant">true</span>|
 
 #### Dialogue Bubble
 |Name|Type|Default|Note|
 |:--:|:--:|:-----:|:---|
-|dialogue|`string` or callable|"Test"|Can accept enemy slot as arg0.|
-|dia_bubble_off_x|`Real`|0||
-|dia_bubble_off_y|`Real`|0||
-|dia_bubble_off_type|Enum `BUBBLE_RELATIVE`|`BUBBLE_RELATIVE.TO_DEFAULT_POS`|
-|dia_bubble_sprites|[Asset.GMSprite, Asset.GMSprite]|`[spr_ui_enc_dialogue_box, spr_ui_enc_dialogue_spike]`|
+|<span class="arg">dialogue</span>|<span class="keyword">String</span> or callable|<span class="string">"Test"</span>|Can accept enemy slot as arg0|
+|<span class="arg">dia_bubble_off_x</span>|<span class="keyword">Real</span>|0||
+|<span class="arg">dia_bubble_off_y</span>|<span class="keyword">Real</span>|0||
+|<span class="arg">dia_bubble_off_type</span>|<span class="keyword">Enum.<br>BUBBLE_RELATIVE</span>|<span class="constant">BUBBLE_RELATIVE.<br>TO_DEFAULT_POS</span>|
+|<span class="arg">dia_bubble_sprites</span>|[<span class="keyword">Asset.GMSprite</span>, <span class="keyword">Asset.GMSprite</span>]|[<span class="constant">spr_ui_enc_dialogue_box</span>, <span class="constant">spr_ui_enc_dialogue_spike</span>]|
 
 #### Recruit
 
-```gml
+```gml:no-line-numbers
     recruit = new enemy_recruit()
 ```
 
