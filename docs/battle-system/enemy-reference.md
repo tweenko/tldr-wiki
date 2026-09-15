@@ -23,7 +23,7 @@ function enc_my_enemy() : enc_enemy() constructor {
 
 ::: tip
 for more info on `turn_object`,
-see [Turn Objects](./turn-objects.md)
+see [Turn Objects](./turn-objects.md).
 :::
 
 ### Optional Overrides
@@ -42,10 +42,10 @@ see [Turn Objects](./turn-objects.md)
 |:--:|:--:|:-----:|:---|
 |hp|`real`|170||
 |max_hp|`real`|170||
-|attack|`real`|0|Unused, doesn't affect anything|
-|defense|`real`|0|When attacked, will reduce incoming damage by 3x the value|
-|status_effect|`string`|""|e.g: "(Tired)" for tired enemies, decorative, drawn next to the enemy name|
-|carrying_money|`real`|0|The amount of money the enemy will drop when defeated|
+|attack|`real`|0|Unused, doesn't affect anything.|
+|defense|`real`|0|When attacked, will reduce incoming damage by 3x the value.|
+|status_effect|`string`|""|e.g: "(Tired)" for tired enemies, decorative, drawn next to the enemy name.|
+|carrying_money|`real`|0|The amount of money the enemy will drop when defeated.|
 |element|`string`|`undefined`|Does nothing on it's own, if the party has weapons with elemental damage multiplier it will check against this string.|
 
 #### Acts
@@ -83,8 +83,8 @@ and the added `ev_pre_dialogue`, which is triggered before the dialogue bubble a
 
 |Name|Type|Default|Note|
 |:--:|:--:|:-----:|:---|
-|mercy|`real`|0|Starting mercy|
-|mercy_add_pity_percent|`real`|20|The mercy gained when trying to SPARE an enemy who's name isn't YELLOW|
+|mercy|`real`|0|Starting mercy.|
+|mercy_add_pity_percent|`real`|20|The mercy gained when trying to spare an enemy who is not at max mercy.|
 |can_spare|`bool`|`true`||
 |no_mercy_text|`string`|"* But you couldn't spare it, for some reason."||
 
@@ -92,13 +92,13 @@ and the added `ev_pre_dialogue`, which is triggered before the dialogue bubble a
 |Name|Type|Default|Note|
 |:--:|:--:|:-----:|:---|
 |tired|`bool`|`false`||
-|low_hp_tired|`bool`|`true`|Whether the enemy should turn tired when hp is low|
-|low_hp_tired_threshold|`Real` [0, 1]|1/2|If the hp is below this threshold, the enemy will become tired if low_hp_tired is true|
+|low_hp_tired|`bool`|`true`|Whether the enemy should turn tired when hp is low.|
+|low_hp_tired_threshold|`Real` [0, 1]|1/2|If the hp is below this threshold, the enemy will become tired if low_hp_tired is true.|
 
 #### Dialogue Bubble
 |Name|Type|Default|Note|
 |:--:|:--:|:-----:|:---|
-|dialogue|`string` or callable|"Test"|Can accept enemy slot as arg0|
+|dialogue|`string` or callable|"Test"|Can accept enemy slot as arg0.|
 |dia_bubble_off_x|`Real`|0||
 |dia_bubble_off_y|`Real`|0||
 |dia_bubble_off_type|Enum `BUBBLE_RELATIVE`|`BUBBLE_RELATIVE.TO_DEFAULT_POS`|
