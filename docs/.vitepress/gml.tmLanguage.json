@@ -17,7 +17,6 @@
             "name": "jsdoc.name",
             "match": "(?<=/// *@\\w+ \\{[A-Za-z0-9_\\.\\,\\|]+\\} )\\w+"
         },
-
         {
             "name": "comment.line",
             "match": "//.*$"

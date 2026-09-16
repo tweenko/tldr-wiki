@@ -14,4 +14,3 @@ hero:
       text: Join The Discord!
       link: https://discord.gg/x3t8JTyC2p
 ---
-

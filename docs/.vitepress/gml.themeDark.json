@@ -1,0 +1,83 @@
+{
+  "name": "gml",
+  "tokenColors": [
+    {
+      "scope": "comment", 
+      "settings": { 
+        "foreground": "#5b995b" 
+      } 
+    },
+    {
+      "scope": "jsdoc.directive",
+      "settings": {
+        "foreground": "#b871ff",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "jsdoc.type",
+      "settings": {
+        "foreground": "#727eff",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "jsdoc.name",
+      "settings": {
+        "foreground": "#72bfff",
+        "fontStyle": "bold italic"
+      }
+    },
+
+    { "scope": "string", 
+      "settings": {
+        "foreground": "#ffff00" 
+      } 
+    },
+    { 
+      "scope": "keyword", 
+      "settings": {
+         "foreground": "#ffb871",
+         "fontStyle": "bold" 
+        } 
+    },
+    {
+      "scope": ["constant", "asset"],
+      "settings": {
+        "foreground": "#ff8080"
+      }
+    },
+    
+    { 
+      "scope": "function", 
+      "settings": {
+         "foreground": "#ffb871" 
+        } 
+    },
+    
+    {
+      "scope": "variable.builtin",
+      "settings": {
+        "foreground": "#58e55a"
+      }
+    },
+    {
+      "scope": "variable",
+      "settings": {
+        "foreground": "#b2b1ff"
+      }
+    },
+    {
+      "scope": "variable.global",
+      "settings": {
+        "foreground": "#ff7eff"
+      }
+    },
+    {
+      "scope": "variable.local",
+      "settings": {
+        "foreground": "#fff899"
+      }
+    }
+  ]
+}
