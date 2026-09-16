@@ -31,7 +31,7 @@
 
     { "scope": "string", 
       "settings": {
-        "foreground": "#032F62" 
+        "foreground": "#824400" 
       } 
     },
     { 
@@ -56,7 +56,7 @@
     {
       "scope": "variable.builtin",
       "settings": {
-        "foreground": "#008000"
+        "foreground": "#148016"
       }
     },
     {
@@ -74,7 +74,7 @@
     {
       "scope": "variable.local",
       "settings": {
-        "foreground": "#004040"
+        "foreground": "#006B6B"
       }
     }
   ]

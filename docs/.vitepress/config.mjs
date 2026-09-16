@@ -1,7 +1,7 @@
 import { defineConfig } from "vitepress";
 import gmlGrammar from "./gml.tmLanguage.json" with { type: "json" };
 import gmlThemeDark from "./gml.themeDark.json" with { type: "json" };
-import gmlThemeLight from "./gml.themeLight.json" with  { type: "json "};
+import gmlThemeLight from "./gml.themeLight.json" with  { type: "json"};
 
 import tlfGrammar from "./tlf.tmLanguage.json" with { type: "json" };
 
