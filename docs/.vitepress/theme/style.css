@@ -244,82 +244,82 @@ span.arg {
     padding-inline: 4px;
     corner-shape: bevel;
     border-radius: 2px;
-  }
-  span.func {
-    color: #660066;
+}
+span.func {
+  color: #660066;
+  font-family: "consolas";
+  
+  background-color: #6600661a;
+  
+  padding: 1px;
+  padding-inline: 4px;
+  corner-shape: bevel;
+  border-radius: 2px;
+}
+span.keyword {
+  color: #660066;
+  font-weight: bold;
+  font-family: "consolas";
+
+  background-color: #6600661a;
+  
+  padding: 1px;
+  padding-inline: 4px;
+  corner-shape: bevel;
+  border-radius: 2px;
+}
+span.constant {
+    color: #Cf2040;
     font-family: "consolas";
-    
-    background-color: #6600661a;
+
+    background-color: #Cf20401a;
     
     padding: 1px;
     padding-inline: 4px;
     corner-shape: bevel;
     border-radius: 2px;
-  }
-  span.keyword {
-    color: #660066;
-    font-weight: bold;
-    font-family: "consolas";
+}
+span.builtin {
+  color: #148016;
+  font-family: "consolas";
 
-    background-color: #6600661a;
-    
-    padding: 1px;
-    padding-inline: 4px;
-    corner-shape: bevel;
-    border-radius: 2px;
-  }
-  span.constant {
-      color: #Cf2040;
-      font-family: "consolas";
+  background-color: #1480161a;
+  
+  padding: 1px;
+  padding-inline: 4px;
+  corner-shape: bevel;
+  border-radius: 2px;
+}
+span.global {
+  color: #ad2bad;
+  font-family: "consolas";
 
-      background-color: #Cf20401a;
-      
-      padding: 1px;
-      padding-inline: 4px;
-      corner-shape: bevel;
-      border-radius: 2px;
-  }
-  span.builtin {
-    color: #148016;
-    font-family: "consolas";
+  background-color: #ad2bad1a;
+  
+  padding: 1px;
+  padding-inline: 4px;
+  corner-shape: bevel;
+  border-radius: 2px;
+}
+span.local {
+  color: #006B6B;
+  font-family: "consolas";
 
-    background-color: #1480161a;
-    
-    padding: 1px;
-    padding-inline: 4px;
-    corner-shape: bevel;
-    border-radius: 2px;
-  }
-  span.global {
-    color: #ad2bad;
-    font-family: "consolas";
+  background-color: #006B6B1a;
+  
+  padding: 1px;
+  padding-inline: 4px;
+  corner-shape: bevel;
+  border-radius: 2px;
+}
+span.string {
+  color: #824400;
+  font-family: "consolas";
 
-    background-color: #ad2bad1a;
-    
-    padding: 1px;
-    padding-inline: 4px;
-    corner-shape: bevel;
-    border-radius: 2px;
-  }
-  span.local {
-    color: #006B6B;
-    font-family: "consolas";
-
-    background-color: #006B6B1a;
-    
-    padding: 1px;
-    padding-inline: 4px;
-    corner-shape: bevel;
-    border-radius: 2px;
-  }
-  span.string {
-    color: #824400;
-    font-family: "consolas";
-
-    background-color: #8244001a;
-    
-    padding: 1px;
-    padding-inline: 4px;
-    corner-shape: bevel;
-    border-radius: 2px;
-  }
+  background-color: #8244001a;
+  
+  padding: 1px;
+  padding-inline: 4px;
+  corner-shape: bevel;
+  border-radius: 2px;
+}
