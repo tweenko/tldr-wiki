@@ -92,11 +92,7 @@
 
 :root {
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(
-    120deg,
-    #bd34fe 30%,
-    #41d1ff
-  );
+  --vp-home-hero-name-background: url("./assets/image_depths.png") repeat-x; 
 
   --vp-home-hero-image-background-image: linear-gradient(
     -45deg,
@@ -104,6 +100,20 @@
     #47caff 50%
   );
   --vp-home-hero-image-filter: blur(44px);
+}
+
+.name.clip {
+  background-repeat: repeat;
+  animation: loop 20s infinite linear; 
+}
+
+@keyframes loop {
+  0% {
+    background-position: bottom right;
+  }
+  100% {
+    background-image: top left;
+  }
 }
 
 @media (min-width: 40rem) {
