@@ -2,6 +2,11 @@
   "name": "gml",
   "tokenColors": [
     {
+      "settings": { 
+        "foreground": "#000000" 
+      } 
+    },
+    {
       "scope": "comment", 
       "settings": { 
         "foreground": "#2b692b" 
