@@ -107,7 +107,8 @@
   animation: loop 20s infinite linear;
 }
 .dark .name.clip {
-  filter: hue-rotate(67deg) brightness(1.5);
+  filter: hue-rotate(90deg) brightness(1.5);
+  -webkit-text-fill-color: #ffffff20;
 }
 
 @keyframes loop {
