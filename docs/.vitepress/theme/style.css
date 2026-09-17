@@ -105,9 +105,9 @@
 .name.clip {
   background-repeat: repeat;
   animation: loop 20s infinite linear;
+  filter: hue-rotate(90deg) brightness(1.5);
 }
 .dark .name.clip {
-  filter: hue-rotate(90deg) brightness(1.5);
   -webkit-text-fill-color: #ffffff20;
 }
 
@@ -130,6 +130,17 @@
   :root {
     --vp-home-hero-image-filter: blur(68px);
   }
+}
+
+/**
+ * Component: Code Blocks
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-code-line-number-color: var(--vp-c-text-1);
+}
+.dark {
+  --vp-code-line-number-color: #F0F0F0;
 }
 
 /**
