@@ -104,7 +104,10 @@
 
 .name.clip {
   background-repeat: repeat;
-  animation: loop 20s infinite linear; 
+  animation: loop 20s infinite linear;
+}
+.dark .name.clip {
+  filter: hue-rotate(67deg) brightness(1.5);
 }
 
 @keyframes loop {
