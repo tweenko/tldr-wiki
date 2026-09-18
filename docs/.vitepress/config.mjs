@@ -16,8 +16,14 @@ export default defineConfig({
         },
         lineNumbers : true
     },
-    description: "A VitePress Site",
+    description: "TLDR Engine documentation",
     themeConfig: {
+
+        logo: {
+            dark : { src: "/assets/tldr-logo-light.png" },
+            light: { src: "/assets/tldr-logo-dark.png" }
+        },
+
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             { text: "Home", link: "/" },
@@ -66,4 +72,8 @@ export default defineConfig({
             { icon: "discord", link: "https://discord.gg/x3t8JTyC2p" },
         ],
     },
+
+    head: [
+        ['link', {rel: "icon", type: "image/png", href: "/assets/tldr-logo-white.png"}]
+    ] 
 });

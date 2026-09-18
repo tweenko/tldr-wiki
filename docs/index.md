@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "Totally Lit Deltarune Engine"
+  name: "TLDR Engine"
   text: "Reference Document"
   tagline: GameMaker based DELTARUNE engine
   actions:
